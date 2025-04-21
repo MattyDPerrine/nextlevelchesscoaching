@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 5-Step Chess Analysis Blueprint</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .chess-pattern {
+            background-color: #f9f9f9;
+            background-image: 
+                linear-gradient(45deg, #e6e6e6 25%, transparent 25%),
+                linear-gradient(-45deg, #e6e6e6 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #e6e6e6 75%),
+                linear-gradient(-45deg, transparent 75%, #e6e6e6 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        .worksheet {
+            border: 2px solid #3182ce;
+            border-radius: 8px;
+        }
+        .worksheet-field {
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            min-height: 80px;
+        }
+        .tip-box {
+            border-left: 4px solid #3182ce;
+        }
+        .highlight {
+            background-color: #ebf8ff;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+         {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header Section -->
+        <header class="text-center mb-10">
+            <div class="chess-pattern py-8 rounded-lg shadow-md mb-6">
+                <h1 class="text-4xl font-bold text-blue-700 mb-2">The 5-Step Chess Analysis Blueprint</h1>
+                <h2 class="text-2xl text-blue-600">Master Self-Analysis & Skyrocket Your Rating</h2>
+            </div>
+            <p class="text-lg text-gray-600 mb-4">A comprehensive guide to analyzing your own chess games like a professional</p>
+            <p class="text-sm text-gray-500">Presented by <a href="https://nextlevelchesscoaching.com/" class="text-blue-600 font-bold hover:underline">NextLevelChessCoaching.com</a></p>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4">Why Game Analysis Is Your Secret Weapon</h2>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-sm mb-6">
+                <p class="mb-4">The difference between average players and strong players isn't just talent—it's the ability to learn from mistakes. Self-analysis is the most powerful tool in your chess improvement arsenal.</p>
+                <p class="font-bold">Did you know?</p>
+                <p>World champions spend more time analyzing their games than playing them. With this 5-step blueprint, you'll analyze your games like a professional, identify critical patterns, and transform weaknesses into strengths.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-6 mb-8">
+                <div class="flex-1 bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold text-blue-700 mb-2"><i class="fas fa-chart-line mr-2"></i>Improvement Benefits</h3>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Identify recurring tactical weaknesses</li>
+                        <li>Discover missed opportunities</li>
+                        <li>Recognize strategic patterns</li>
+                        <li>Build a personalized improvement plan</li>
+                        <li>Gain +100-200 rating points in 3-6 months</li>
+                    </ul>
+                </div>
+                <div class="flex-1 bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-bold text-blue-700 mb-2"><i class="fas fa-exclamation-triangle mr-2"></i>Common Analysis Mistakes</h3>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Relying too heavily on computer engines</li>
+                        <li>Focusing only on tactical blunders</li>
+                        <li>Not identifying the root causes of errors</li>
+                        <li>Skipping positional and strategic analysis</li>
+                        <li>Not creating actionable improvement plans</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blueprint Overview -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">The 5-Step Analysis Blueprint: Overview</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+                <div class="bg-blue-100 p-4 rounded-lg text-center shadow-sm">
+                    <div class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2">1</div>
+                    <h3 class="font-bold">First Impressions</h3>
+                    <p class="text-sm">Record your thoughts before engine analysis</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center shadow-sm">
+                    <div class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2">2</div>
+                    <h3 class="font-bold">Critical Moments</h3>
+                    <p class="text-sm">Identify turning points and decision nodes</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center shadow-sm">
+                    <div class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2">3</div>
+                    <h3 class="font-bold">Pattern Recognition</h3>
+                    <p class="text-sm">Spot recurring tactical and strategic themes</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center shadow-sm">
+                    <div class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2">4</div>
+                    <h3 class="font-bold">Engine Verification</h3>
+                    <p class="text-sm">Use computer analysis to confirm findings</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center shadow-sm">
+                    <div class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2">5</div>
+                    <h3 class="font-bold">Improvement Plan</h3>
+                    <p class="text-sm">Create actionable training tasks</p>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 p-5 rounded-lg border-l-4 border-yellow-400 mb-8">
+                <h3 class="font-bold text-lg mb-2">Important: The Analysis Mindset</h3>
+                <p>Approach each analysis session with curiosity, not judgment. You're not looking to criticize yourself but to understand and improve. This blueprint works for players of all levels—from beginners to advanced players.</p>
+            </div>
+        </section>
+
+        <!-- Step 1: First Impressions -->
+        <section class="mb-12">
+            <div class="bg-blue-700 text-white p-4 rounded-t-lg">
+                <h2 class="text-2xl font-bold">STEP 1: First Impressions Analysis</h2>
+            </div>
+            <div class="border-2 border-blue-700 border-t-0 rounded-b-lg p-6 mb-6">
+                <p class="mb-4">Before checking with an engine, spend 15-20 minutes reviewing your game and recording your thoughts. This develops your independent analytical skills and helps you understand your thought process.</p>
+                
+                <h3 class="text-xl font-bold text-blue-700 mb-3">Key Actions:</h3>
+                <ul class="list-disc pl-5 mb-6 space-y-2">
+                    <li><span class="font-bold">Replay the entire game</span> from start to finish without computer assistance</li>
+                    <li><span class="font-bold">Note your emotional state</span> during critical moments of the game</li>
+                    <li><span class="font-bold">Identify moments</span> where you felt uncertain or spent significant time thinking</li>
+                    <li><span class="font-bold">Record alternative moves</span> you considered but didn't play</li>
+                    <li><span class="font-bold">Write down questions</span> about positions you didn't understand</li>
+                </ul>
+
+                <div class="tip-box pl-4 py-2 bg-blue-50 mb-6">
+                    <p class="text-sm italic"><strong>Pro Tip:</strong> Use a physical chess board for this step if possible. The tactile experience improves visualization and helps you internalize patterns more effectively than digital analysis.</p>
+                </div>
+
+                <div class="worksheet p-5 bg-white rounded-lg mb-4">
+                    <h3 class="text-lg font-bold text-blue-600 mb-3">First Impressions Worksheet</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold mb-1">Overall game assessment:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Write your thoughts about how the game went overall]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Key moments where I felt uncertain:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[List positions with move numbers]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Moves I'm proud of:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[List your best moves]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Moves I suspect were mistakes:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[List moves you think might be errors]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Critical Moments -->
+        <section class="mb-12">
+            <div class="bg-blue-700 text-white p-4 rounded-t-lg">
+                <h2 class="text-2xl font-bold">STEP 2: Identifying Critical Moments</h2>
+            </div>
+            <div class="border-2 border-blue-700 border-t-0 rounded-b-lg p-6 mb-6">
+                <p class="mb-4">Every game has 5-10 critical moments where the outcome could have changed dramatically. Learning to identify these positions will sharpen your sense of danger and opportunity.</p>
+                
+                <h3 class="text-xl font-bold text-blue-700 mb-3">Types of Critical Moments:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2">Tactical Turning Points</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Missed tactics (forks, pins, skewers)</li>
+                            <li>Calculation errors</li>
+                            <li>Piece blunders</li>
+                            <li>Defensive oversights</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2">Strategic Decision Nodes</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Pawn structure changes</li>
+                            <li>Piece exchanges</li>
+                            <li>Opening transitions</li>
+                            <li>Endgame transitions</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2">Psychological Moments</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Time pressure decisions</li>
+                            <li>Accepting/declining draws</li>
+                            <li>Recovery after mistakes</li>
+                            <li>Handling complex positions</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2">Evaluation Shifts</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Equal to advantage</li>
+                            <li>Advantage to winning</li>
+                            <li>Worse to equal</li>
+                            <li>Winning to drawing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip-box pl-4 py-2 bg-blue-50 mb-6">
+                    <p class="text-sm italic"><strong>Pro Tip:</strong> Critical moments often occur after long thinks from either player. When your opponent thinks for a long time, it often signals a complex position worth analyzing deeply.</p>
+                </div>
+
+                <div class="worksheet p-5 bg-white rounded-lg mb-4">
+                    <h3 class="text-lg font-bold text-blue-600 mb-3">Critical Moments Worksheet</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold mb-1">Position 1 (Move #___):</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Describe the position and your thought process]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Position 2 (Move #___):</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Describe the position and your thought process]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Position 3 (Move #___):</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Describe the position and your thought process]</div>
+                        </div>
+                        <div class="mt-3">
+                            <p class="font-semibold">For each position, answer:</p>
+                            <ol class="list-decimal pl-5 space-y-1 text-sm">
+                                <li>What move did I play and why?</li>
+                                <li>What alternatives did I consider?</li>
+                                <li>What did I miss in my calculation?</li>
+                                <li>How could I improve my decision process here?</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Pattern Recognition -->
+        <section class="mb-12">
+            <div class="bg-blue-700 text-white p-4 rounded-t-lg">
+                <h2 class="text-2xl font-bold">STEP 3: Pattern Recognition</h2>
+            </div>
+            <div class="border-2 border-blue-700 border-t-0 rounded-b-lg p-6 mb-6">
+                <p class="mb-4">Chess improvement accelerates when you start recognizing patterns across multiple games. Look for recurring themes in your play to identify systematic strengths and weaknesses.</p>
+                
+                <h3 class="text-xl font-bold text-blue-700 mb-3">Pattern Categories:</h3>
+                <div class="space-y-4 mb-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2">Tactical Patterns</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Fork opportunities</li>
+                                <li>Pin and skewer setups</li>
+                                <li>Discovered attack positions</li>
+                                <li>Back rank weaknesses</li>
+                            </ul>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Knight outpost positions</li>
+                                <li>Bishop pair utilization</li>
+                                <li>Rook on open file effectiveness</li>
+                                <li>Queen mobility patterns</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2">Strategic Patterns</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Pawn structure strengths/weaknesses</li>
+                                <li>Piece coordination issues</li>
+                                <li>King safety assessment</li>
+                                <li>Space advantage utilization</li>
+                            </ul>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Opening system understanding</li>
+                                <li>Middlegame plan execution</li>
+                                <li>Endgame technique application</li>
+                                <li>Time management tendencies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box pl-4 py-2 bg-blue-50 mb-6">
+                    <p class="text-sm italic"><strong>Pro Tip:</strong> Create a personal "pattern database" by keeping track of recurring themes in your games. Review this collection regularly to reinforce your understanding of these patterns.</p>
+                </div>
+
+                <div class="worksheet p-5 bg-white rounded-lg mb-4">
+                    <h3 class="text-lg font-bold text-blue-600 mb-3">Pattern Recognition Worksheet</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold mb-1">Tactical patterns I noticed:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[List recurring tactical motifs]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Strategic patterns I noticed:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[List recurring strategic themes]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Opening patterns to study:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Note typical positions from your opening that need attention]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Pattern comparison with master games:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[How do masters handle similar positions?]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Engine Verification -->
+        <section class="mb-12">
+            <div class="bg-blue-700 text-white p-4 rounded-t-lg">
+                <h2 class="text-2xl font-bold">STEP 4: Engine Verification</h2>
+            </div>
+            <div class="border-2 border-blue-700 border-t-0 rounded-b-lg p-6 mb-6">
+                <p class="mb-4">Now it's time to compare your analysis with computer evaluation. The engine should be used to verify your findings, not replace your thinking process.</p>
+                
+                <h3 class="text-xl font-bold text-blue-700 mb-3">Effective Engine Use:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h4 class="font-bold text-blue-600 mb-2">Do's</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Compare your analysis to engine evaluation</li>
+                            <li>Focus on understanding <span class="highlight">why</span> your moves were inaccurate</li>
+                            <li>Use multiple depths to ensure evaluation stability</li>
+                            <li>Look for tactics you missed in critical positions</li>
+                            <li>Verify your tactical calculations</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-600 mb-2">Don'ts</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Rely solely on engine evaluation</li>
+                            <li>Get discouraged by perfect engine moves</li>
+                            <li>Skip your own analysis and go straight to the engine</li>
+                            <li>Memorize engine lines without understanding</li>
+                            <li>Dismiss your ideas if they're not the top engine choice</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 p-5 rounded-lg border-l-4 border-yellow-400 mb-6">
+                    <h4 class="font-bold text-lg mb-2">The Engine Paradox</h4>
+                    <p>While engines provide perfect tactical analysis, they can hinder your development if used incorrectly. The goal is to strengthen your own analytical muscles, not replace them with computer evaluation.</p>
+                </div>
+
+                <div class="tip-box pl-4 py-2 bg-blue-50 mb-6">
+                    <p class="text-sm italic"><strong>Pro Tip:</strong> For each critical position, try to predict what the engine will suggest before checking. This trains your intuition and helps you understand your blind spots.</p>
+                </div>
+
+                <div class="worksheet p-5 bg-white rounded-lg mb-4">
+                    <h3 class="text-lg font-bold text-blue-600 mb-3">Engine Verification Worksheet</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold mb-1">Top 3 missed tactics:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[List positions where you missed tactical opportunities]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Strategic misconceptions:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Note positions where your strategic assessment differed from the engine]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Calculation errors:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Identify where your calculation went wrong]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Good moves I found:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Celebrate where your analysis matched the engine]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 5: Improvement Plan -->
+        <section class="mb-12">
+            <div class="bg-blue-700 text-white p-4 rounded-t-lg">
+                <h2 class="text-2xl font-bold">STEP 5: Create Your Improvement Plan</h2>
+            </div>
+            <div class="border-2 border-blue-700 border-t-0 rounded-b-lg p-6 mb-6">
+                <p class="mb-4">The most crucial step—turning your analysis into specific, actionable improvement tasks. Without this step, analysis becomes merely academic instead of practical.</p>
+                
+                <h3 class="text-xl font-bold text-blue-700 mb-3">Creating Effective Improvement Tasks:</h3>
+                <div class="space-y-4 mb-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2">SMART Criteria for Chess Tasks</h4>
+                        <ul class="list-none space-y-2">
+                            <li><span class="font-bold text-blue-700">S</span>pecific: "Practice knight forks" vs. "Solve 20 knight fork puzzles daily for 1 week"</li>
+                            <li><span class="font-bold text-blue-700">M</span>easurable: Track completion and performance metrics</li>
+                            <li><span class="font-bold text-blue-700">A</span>chievable: Set realistic goals based on your level and time availability</li>
+                            <li><span class="font-bold text-blue-700">R</span>elevant: Focus on weaknesses that appeared in multiple games</li>
+                            <li><span class="font-bold text-blue-700">T</span>ime-bound: Set deadlines for completing each improvement task</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2">Task Categories</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h5 class="font-semibold">Knowledge Tasks</h5>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li>Study specific opening variations</li>
+                                    <li>Learn endgame principles</li>
+                                    <li>Review master games in similar positions</li>
+                                    <li>Read books on strategic themes</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold">Skill Tasks</h5>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li>Solve tactical puzzles in problem areas</li>
+                                    <li>Practice calculation exercises</li>
+                                    <li>Play specific positions against an engine</li>
+                                    <li>Conduct endgame drills</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold">Process Tasks</h5>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li>Implement a blunder check routine</li>
+                                    <li>Develop a pre-move checklist</li>
+                                    <li>Practice candidate moves method</li>
+                                    <li>Improve time management</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold">Testing Tasks</h5>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li>Play thematic games focusing on weakness</li>
+                                    <li>Set up specific positions to practice</li>
+                                    <li>Create challenge scenarios</li>
+                                    <li>Track improvement metrics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box pl-4 py-2 bg-blue-50 mb-6">
+                    <p class="text-sm italic"><strong>Pro Tip:</strong> Focus on just 2-3 improvement areas at a time. Trying to fix everything at once leads to scattered effort and minimal progress. Master a few skills before moving to others.</p>
+                </div>
+
+                <div class="worksheet p-5 bg-white rounded-lg mb-4">
+                    <h3 class="text-lg font-bold text-blue-600 mb-3">Improvement Plan Worksheet</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold mb-1">Primary weakness identified:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Your most important area to improve]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Specific improvement task #1:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Define a SMART task to address this weakness]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Specific improvement task #2:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[Define a second SMART task]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Success measurement:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[How will you know you've improved in this area?]</div>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Implementation schedule:</p>
+                            <div class="worksheet-field p-3 bg-gray-50">[When and how often will you work on these tasks?]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Log -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4">Your Game Analysis Log</h2>
+            <p class="mb-4">Track your analysis sessions and improvement over time with this log. Aim to analyze at least one game per week for optimal improvement.</p>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-300">
+                    <thead>
+                        <tr class="bg-blue-100">
+                            <th class="py-2 px-4 border-b border-r">Date</th>
+                            <th class="py-2 px-4 border-b border-r">Game Details</th>
+                            <th class="py-2 px-4 border-b border-r">Key Findings</th>
+                            <th class="py-2 px-4 border-b border-r">Improvement Tasks</th>
+                            <th class="py-2 px-4 border-b">Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b">☐</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b">☐</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b">☐</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b">☐</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b border-r"></td>
+                            <td class="py-2 px-4 border-b">☐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Ready for Next Level -->
+        <section class="mb-12">
+            <div class="bg-blue-600 text-white p-8 rounded-lg shadow-lg text-center">
+                <h2 class="text-3xl font-bold mb-4">Ready to Take Your Chess to the Next Level?</h2>
+                <p class="mb-6 text-lg">This blueprint is just the beginning of your chess improvement journey. For personalized coaching, advanced analysis techniques, and tailored improvement plans:</p>
+                <div class="flex justify-center">
+                    <a href="https://nextlevelchesscoaching.com" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-full text-lg hover:bg-blue-100 transition duration-300">Visit NextLevelChessCoaching.com</a>
+                </div>
+                <p class="mt-4 text-sm">Get personalized coaching from USCF National Master / FIDE Master Dalton Perrine</p>
+            </div>
+        </section>
+
+        <!-- Bonus: Common Mistakes -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4">BONUS: Top 10 Chess Analysis Mistakes to Avoid</h2>
+            <div class="bg-red-50 p-6 rounded-lg shadow-sm">
+                <ol class="list-decimal pl-5 space-y-3">
+                    <li><span class="font-bold">Skipping self-analysis</span> and going straight to engine evaluation</li>
+                    <li><span class="font-bold">Focusing only on blunders</span> while ignoring subtle strategic errors</li>
+                    <li><span class="font-bold">Not categorizing mistakes</span> by type (tactical, strategic, psychological)</li>
+                    <li><span class="font-bold">Analyzing without actionable takeaways</span> for improvement</li>
+                    <li><span class="font-bold">Only analyzing losses</span> (wins contain valuable lessons too!)</li>
+                    <li><span class="font-bold">Ignoring your emotional state</span> during critical moments</li>
+                    <li><span class="font-bold">Failing to look for patterns</span> across multiple games</li>
+                    <li><span class="font-bold">Not studying master games</span> with similar positions</li>
+                    <li><span class="font-bold">Analyzing too many games superficially</span> rather than fewer games deeply</li>
+                    <li><span class="font-bold">Not revisiting previous analyses</span> to check improvement progress</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-6 border-t-2 border-blue-200">
+            <p class="text-gray-600 mb-2">© 2025 NextLevelChessCoaching.com - All Rights Reserved</p>
+            <p class="text-sm text-gray-500 mb-4">Created by USCF National Master / FIDE Master Dalton Perrine</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://nextlevelchesscoaching.com" class="text-blue-600 hover:underline">Website</a>
+                <a href="https://nextlevelchesscoaching.com/contact-me/" class="text-blue-600 hover:underline">Contact</a>
+                <a href="https://nextlevelchesscoaching.com/online-chess-coaching/" class="text-blue-600 hover:underline">Coaching Services</a>
+            </div>
+            <p class="mt-6 text-sm text-gray-500">Take your chess game to the <span class="font-bold text-blue-600">NEXT LEVEL</span></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Level Chess Coaching - Professional Chess Coaching</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        .chess-pattern {
+            background-image:
+                linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+                linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 40px 40px;
+            background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+        }
+        .testimonial-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        .package-card {
+            transition: all 0.3s ease;
+        }
+        .package-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .calendar-day {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .calendar-day.available:hover {
+            background-color: #e2e8f0;
+            transform: scale(1.05);
+        }
+        .calendar-day.selected {
+            background-color: #4299e1;
+            color: white;
+        }
+        .time-slot {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .time-slot:hover {
+            background-color: #e2e8f0;
+        }
+        .time-slot.selected {
+            background-color: #4299e1;
+            color: white;
+        }
+        .substack-logo {
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4 px-6 fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-chess-knight text-blue-600 text-3xl mr-3"></i>
+                <span class="font-bold text-xl text-gray-800">Next Level Chess Coaching</span>
+            </div>
+            <div class="hidden md:flex">
+                <a href="#about" class="mx-3 text-gray-600 hover:text-blue-600 transition">About</a>
+                <a href="#packages" class="mx-3 text-gray-600 hover:text-blue-600 transition">Packages</a>
+                <a href="#calendar" class="mx-3 text-gray-600 hover:text-blue-600 transition">Book a Session</a>
+                <a href="#testimonials" class="mx-3 text-gray-600 hover:text-blue-600 transition">Testimonials</a>
+                <a href="#contact" class="mx-3 text-gray-600 hover:text-blue-600 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 chess-pattern">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">Elevate Your Chess Game with Professional Coaching</h1>
+                    <p class="text-xl text-gray-600 mb-8">From beginners to advanced players, my personalized coaching will help you master the strategies of chess and reach your full potential.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#packages" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition shadow-lg hover:shadow-xl text-center">View Packages</a>
+                        <a href="#calendar" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full border-2 border-blue-600 transition shadow-lg hover:shadow-xl text-center">Book a Session</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -top-6 -left-6 w-64 h-64 bg-blue-100 rounded-full"></div>
+                        <img src="https://page.genspark.site/v1/base64_upload/7e6c099c1be582f777cc9582f437d202" alt="Chess Coach" class="w-96 h-96 object-cover relative z-1 rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About Your Coach</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0">
+                    <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-xl">
+                        <img src="https://page.genspark.site/v1/base64_upload/6c641de3e26c223fcd50a8513e5f78af" alt="Coach with Trophy" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">FIDE Master Dalton Perrine</h3>
+                    <p class="text-gray-600 mb-6">With over 20 years of competitive chess experience and over 10 years of coaching, I've helped hundreds of students develop a deeper understanding of the game, improve their rating and achieve their goals. My coaching is personalized to each individual student and combines classical chess principles with modern preparation techniques.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-trophy text-yellow-500 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">FIDE Master</h4>
+                                <p class="text-gray-600">Peak Rating 2374</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-book text-yellow-500 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Chessable Author</h4>
+                                <p class="text-gray-600">5+ courses created</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-blue-500 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Professional Coach</h4>
+                                <p class="text-gray-600">10+ years experience</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-blue-500 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Student Success</h4>
+                                <p class="text-gray-600">500+ students coached</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What You'll Learn</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">My coaching program is designed to provide you with a comprehensive understanding of chess, from basic principles to advanced strategies.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Opening Principles</h3>
+                    <p class="text-gray-600">Learn how to start your games with confidence. Master opening principles and develop a repertoire tailored to your style.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tactical Mastery</h3>
+                    <p class="text-gray-600">Discover powerful tactical motifs and improve your calculation skills to find winning combinations in your games.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-chess-queen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Strategic Planning</h3>
+                    <p class="text-gray-600">Develop long-term strategic thinking. Understand pawn structures, piece placement, and positional advantages.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-chess-rook"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Endgame Techniques</h3>
+                    <p class="text-gray-600">Master essential endgame principles and techniques to convert your advantages into wins, even in the most complex positions.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Psychological Preparation</h3>
+                    <p class="text-gray-600">Develop mental toughness and focus. Learn to manage time pressure and maintain composure in critical positions.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Modern Chess Preparation</h3>
+                    <p class="text-gray-600">Learn how to use chess engines and databases effectively. Develop a structured approach to independent study.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Coaching Packages</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Choose the package that best fits your needs. All sessions are personalized to your skill level and goals.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="package-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                    <div class="bg-gray-100 py-4 text-center">
+                        <h3 class="text-2xl font-bold text-gray-800">Quick Start</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-5xl font-bold text-blue-600">1</span>
+                            <span class="text-xl text-gray-600 ml-1">Hour</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Personalized coaching</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Game analysis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Key improvement areas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Study plan recommendation</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mb-6">
+                            <span class="text-2xl font-bold text-gray-800">$80</span>
+                        </div>
+                        <a href="#calendar" class="block bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-3 px-4 rounded-lg transition">Book Now</a>
+                    </div>
+                </div>
+                <div class="package-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                    <div class="bg-gray-100 py-4 text-center">
+                        <h3 class="text-2xl font-bold text-gray-800">Fundamentals</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-5xl font-bold text-blue-600">3</span>
+                            <span class="text-xl text-gray-600 ml-1">Hours</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Three personalized sessions</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>In-depth game analysis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Opening recommendations</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Personalized homework</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Email support between sessions</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mb-6">
+                            <span class="text-2xl font-bold text-gray-800">$235</span>
+                            <span class="text-gray-500 line-through ml-2">$240</span>
+                        </div>
+                        <a href="#calendar" class="block bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-3 px-4 rounded-lg transition">Book Now</a>
+                    </div>
+                </div>
+                <div class="package-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 transform scale-105">
+                    <div class="bg-blue-600 py-4 text-center">
+                        <h3 class="text-2xl font-bold text-white">Most Popular</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-5xl font-bold text-blue-600">5</span>
+                            <span class="text-xl text-gray-600 ml-1">Hours</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Five comprehensive sessions</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Comprehensive game analysis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Opening recommendations</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Personalized homework</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Extended email support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Access to premium chess resources</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mb-6">
+                            <span class="text-2xl font-bold text-gray-800">$380</span>
+                            <span class="text-gray-500 line-through ml-2">$400</span>
+                        </div>
+                        <a href="#calendar" class="block bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-3 px-4 rounded-lg transition">Book Now</a>
+                    </div>
+                </div>
+                <div class="package-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                    <div class="bg-gray-100 py-4 text-center">
+                        <h3 class="text-2xl font-bold text-gray-800">Master Track</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-5xl font-bold text-blue-600">10</span>
+                            <span class="text-xl text-gray-600 ml-1">Hours</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Ten comprehensive sessions</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Elite game analysis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Opening recommendations</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Personalized homework</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Unlimited email support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Access to premium chess resources</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mb-6">
+                            <span class="text-2xl font-bold text-gray-800">$750</span>
+                            <span class="text-gray-500 line-through ml-2">$800</span>
+                        </div>
+                        <a href="#calendar" class="block bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-3 px-4 rounded-lg transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Calendar Section -->
+    <section id="calendar" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Book Your Session</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Select a date and time that works for you, and I'll be in touch to confirm your booking.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="text-center mb-8">
+                    <p class="text-gray-600">Click the button below to open our scheduling system and book your preferred time slot.</p>
+                    <button id="setmore-button" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition">Schedule Your Session</button>
+                </div>
+                <div id="setmore-iframe-container" class="setmore-iframe-container" style="display: none; height: 700px; width: 100%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Student Success Stories</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">See how my coaching has helped students of all levels improve their chess skills and achieve their goals.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold text-xl">MC</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Marc (California)</h4>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Sign up for lessons immediately! I received an excellent breakdown of some of my games. What I really enjoyed was the clear explanations to my questions, the book recommendations, and the clear plan to improve my chess. Just sign up :-)"</p>
+                </div>
+                <div class="testimonial-card bg-gray-50 rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold text-xl">JI</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Jefferson (Illinois)</h4>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Mark Dvoretsky once said that serious work with a chessplayer begins with a diagnosis of the student's strengths and weaknesses. I have taken lessons from two other coaches in the past and Dalton is the first one to have started off with an interest in learning the style of his students so that he can personalize his lessons to enhance your strengths and eliminate weaknesses. I highly recommend him to anyone who is serious about improving their chess"</p>
+                </div>
+                <div class="testimonial-card bg-gray-50 rounded-xl shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold text-xl">CH</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Coel (Hawaii)</h4>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"My first lesson with Dalton was – first and foremost – enjoyable, and I think that's a key component to any effective chess coach. He broke down my needed areas of improvement and identified some key components in my own play & style, which isn't easy for any chess player to do for him/herself! I was very surprised at how quickly time flew in our lesson, but we covered great ground, and it was only the first (of hopefully many!). Dalton's a class-A act who can improve any aspiring tournament player with his game. Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about my chess coaching services.</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+                    <div class="border-b px-6 py-4">
+                        <button class="flex justify-between items-center w-full text-left font-bold text-gray-800">
+                            <span>How are the coaching sessions conducted?</span>
+                            <i class="fas fa-chevron-down text-blue-600"></i>
+                        </button>
+                        <div class="mt-3 text-gray-600">
+                            <p>Sessions are conducted online via Zoom and a digital chess board. This allows us to analyze positions, play training games, and review concepts in real-time. There is an option for receiving a recording of each session for later review.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+                    <div class="border-b px-6 py-4">
+                        <button class="flex justify-between items-center w-full text-left font-bold text-gray-800">
+                            <span>What's the recommended session frequency?</span>
+                            <i class="fas fa-chevron-down text-blue-600"></i>
+                        </button>
+                        <div class="mt-3 text-gray-600">
+                            <p>For optimal improvement, I recommend one session per week. This gives you enough time to practice the concepts we cover and complete any homework assignments. However, we can adjust the frequency based on your schedule and goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+                    <div class="border-b px-6 py-4">
+                        <button class="flex justify-between items-center w-full text-left font-bold text-gray-800">
+                            <span>Do I need to prepare anything before our first session?</span>
+                            <i class="fas fa-chevron-down text-blue-600"></i>
+                        </button>
+                        <div class="mt-3 text-gray-600">
+                            <p>It's helpful to have some of your recent games available for us to review. This gives me a better understanding of your playing style and areas for improvement. You should also come prepared with specific goals you'd like to achieve through our coaching sessions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+                    <div class="border-b px-6 py-4">
+                        <button class="flex justify-between items-center w-full text-left font-bold text-gray-800">
+                            <span>What if I need to reschedule a session?</span>
+                            <i class="fas fa-chevron-down text-blue-600"></i>
+                        </button>
+                        <div class="mt-3 text-gray-600">
+                            <p>Life happens! You can reschedule a session with at least 24 hours notice at no additional cost. If you need to reschedule with less notice, I'll do my best to accommodate, but cannot guarantee availability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Me</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions about coaching? Get in touch and I'll be happy to help.</p>
+            </div>
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-lg p-8">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Email</p>
+                                    <p class="text-gray-600">
+                                        NextLevelChess<br>
+                                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f3c101e1c171611183f18121e1613511c1012">[email&#160;protected]</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-globe text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Social Media</p>
+                                    <div class="flex space-x-3 mt-2">
+                                        <a href="https://www.youtube.com/@DaltonPerrine" target="_blank" class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center text-white">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                        <a href="https://www.chessable.com/author/mattydperrine/" target="_blank" class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                                            <i class="fas fa-book"></i>
+                                        </a>
+                                        <a href="https://open.spotify.com/show/6EknGRW7czzortrUSlgDhQ" target="_blank" class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white">
+                                            <i class="fab fa-spotify"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8 md:border-l md:border-gray-300">
+                        <h3 class="text-xl font-bold mb-6">Send Me a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="contact-name">Your Name</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="contact-subject">Subject</label>
+                                <input type="text" id="contact-subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Subject">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="contact-message">Message</label>
+                                <textarea id="contact-message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="button" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chess-knight text-blue-400 text-3xl mr-3"></i>
+                        <span class="font-bold text-xl">Next Level Chess Coaching</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md mb-6">Take your chess to the next level with personalized coaching from FIDE Master Dalton Perrine.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/@DaltonPerrine" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.chessable.com/author/mattydperrine/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fas fa-book text-xl"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/6EknGRW7czzortrUSlgDhQ" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-spotify text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                            <li><a href="#packages" class="text-gray-400 hover:text-white transition">Packages</a></li>
+                            <li><a href="#calendar" class="text-gray-400 hover:text-white transition">Book a Session</a></li>
+                            <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">Resources</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://www.chessable.com/author/mattydperrine/" target="_blank" class="text-gray-400 hover:text-white transition">Chessable Courses</a></li>
+                            <li><a href="chess_analysis_blueprint.html" target="_blank" class="text-gray-400 hover:text-white transition">Chess Analysis Blueprint</a></li>
+                            <li><a href="chess_improvement_guide.html" target="_blank" class="text-gray-400 hover:text-white transition">Chess Improvement Roadmap</a></li>
+                            <li><a href="https://page.genspark.site/page/toolu_0113X6cUyT51F17fdKHg/benko_gambit_cheat_sheet.html" target="_blank" class="text-gray-400 hover:text-white transition">Benko Gambit Cheat Sheet</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Reti Nimzo-Larsen Cheat Sheet</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">French Defense Cheat Sheet</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Next Level Chess Coaching. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        // Setmore Booking Integration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Setmore widget settings
+            const iframeContainer = document.getElementById('setmore-iframe-container');
+            const setmoreButton = document.getElementById('setmore-button');
+            let iframeCreated = false;
+
+            // Function to load Setmore widget
+            function loadSetmoreWidget() {
+                // First time clicking the button
+                if (!iframeCreated) {
+                    // Create the iframe
+                    const iframe = document.createElement('iframe');
+                    iframe.id = 'setmore-iframe';
+                    iframe.src = `https://nextlevelchesscoaching.setmore.com/`;
+                    iframe.width = '100%';
+                    iframe.height = '100%';
+                    iframe.frameBorder = '0';
+                    iframe.scrolling = 'yes';
+                    iframe.allowTransparency = true;
+
+                    // Clear the container and add the iframe
+                    iframeContainer.innerHTML = '';
+                    iframeContainer.appendChild(iframe);
+                    iframeCreated = true;
+
+                    // Show the container
+                    iframeContainer.style.display = 'block';
+
+                    // Update button
+                    setmoreButton.textContent = 'Close Booking Widget';
+                    setmoreButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                    setmoreButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+
+                    // Scroll to the iframe
+                    setTimeout(() => {
+                        iframeContainer.scrollIntoView({ behavior: 'smooth' });
+                    }, 300);
+                }
+                // Already created, just toggle visibility
+                else {
+                    const isCurrentlyVisible = iframeContainer.style.display === 'block';
+
+                    if (isCurrentlyVisible) {
+                        // Hide the container
+                        iframeContainer.style.display = 'none';
+
+                        // Update button
+                        setmoreButton.textContent = 'Schedule Your Session';
+                        setmoreButton.classList.remove('bg-gray-600', 'hover:bg-gray-700');
+                        setmoreButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                    } else {
+                        // Show the container
+                        iframeContainer.style.display = 'block';
+
+                        // Update button
+                        setmoreButton.textContent = 'Close Booking Widget';
+                        setmoreButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                        setmoreButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+
+                        // Scroll to the iframe
+                        setTimeout(() => {
+                            iframeContainer.scrollIntoView({ behavior: 'smooth' });
+                        }, 300);
+                    }
+                }
+            }
+
+            // Add event listener to the button
+            setmoreButton.addEventListener('click', loadSetmoreWidget);
+
+            // Make "Book Now" buttons work with Setmore
+            document.querySelectorAll('a[href="#calendar"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Scroll to calendar section
+                    document.getElementById('calendar').scrollIntoView({ behavior: 'smooth' });
+
+                    // Automatically open Setmore widget after scrolling
+                    setTimeout(() => {
+                        if (iframeContainer.style.display === 'none' || iframeContainer.style.display === '') {
+                            loadSetmoreWidget();
+                        }
+                    }, 800);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
